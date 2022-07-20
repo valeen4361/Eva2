@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Supermercado", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Categoria", "Index", "Categorias")</li>
+                    <li>@Html.ActionLink("Productos", "Index", "Productoes")</li>
+                    <li>@Html.ActionLink("Estadisticas", "Estadisticas", "Home")</li>
+                    <li>@Html.ActionLink("Busqueda", "Busqueda", "Home")</li>
+               
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer style="background-color: #000000;">
+            <p>&copy; @DateTime.Now.Year </p>
+            <div class="container my-5  "  > 
+                    <div class="container p-4">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 mb-4">
+                                <h5 class="mb-3" style="letter-spacing: 2px; color: #ffffff;">footer content</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                                    voluptatem veniam, est atque cumque eum delectus sint!
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <h5 class="mb-3" style="letter-spacing: 2px; color: #ffffff;">links</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: #4f4f4f;">Frequently Asked Questions</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: #4f4f4f;">Delivery</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: #4f4f4f;">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style="color: #4f4f4f;">Where we deliver?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <h5 class="mb-1" style="letter-spacing: 2px; color: #ffffff;">opening hours</h5>
+                                <table class="table" style="color: #4f4f4f; border-color: #666;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Mon - Fri:</td>
+                                            <td>8am - 9pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sat - Sun:</td>
+                                            <td>8am - 1am</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                        © 2020 Copyright:
+                        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    </div>
+                    <!-- Copyright -->
+                
+
+            </div>
+            <!-- End of .container -->
+
+
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
